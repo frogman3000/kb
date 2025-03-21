@@ -1,5 +1,4 @@
 AWS Bedrock Knowledge Base Query Tool
-
 Overview
 This Python application enables users to interact with AWS Bedrock Knowledge Bases. It provides functionality to list available knowledge bases and query them using natural language, leveraging the Bedrock Agent Runtime service.
 
@@ -19,10 +18,17 @@ botocore
 
 Installation
 Ensure you have Python installed
-Install required dependencies:
 
+Install required dependencies:
 pip install boto3
 
+
+Configure AWS credentials using one of the following methods:
+
+AWS CLI configuration
+Environment variables
+
+IAM role (if running on AWS infrastructure)
 
 Project Structure
 The project consists of three main functions:
@@ -89,11 +95,15 @@ Maintains clean separation of concerns between functions
 
 Limitations
 Region is hardcoded to us-west-2
+
 Single model support
+
 Maximum of 100 vector search results
 
 Security Considerations
-
 Requires appropriate AWS IAM permissions
+
 Should be run in a secure environment with proper AWS credentials
+
 Credentials should be managed through AWS best practices
+
